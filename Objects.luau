@@ -31,7 +31,7 @@ do
         ["Plasma pistol"] = "rbxassetid://5312934759",
         ["Plasma machine"] = "rbxassetid://2605256561",
         ["MP40"] = "rbxassetid://103807799095792",
-        ["G36c"] = "rbxassetid//4759267374",
+        ["G36c"] = "rbxassetid://4759267374",
 
     };
     objects["shoot_sounds_key"] = {"Custom", "Bow", "Crossbow", "Plasma shotgun", "Plasma pistol", "Plasma machine", "MP40", "G36c"};
