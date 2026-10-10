@@ -3514,19 +3514,13 @@ function Library:Notify(Text, Time)
 
 	NotifyOuter.Parent = Library.NotificationArea;
 
-	local ok, err = pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, XSize + 8 + 4, 0, YSize), 'Out', 'Quad', 0.4, true);
-	if not (ok) then
-		error(err)
-	end;
-	
+
 	task.spawn(function()
+		pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, XSize + 8 + 4, 0, YSize), 'Out', 'Quad', 0.4, true);
+		
 		task.wait(Time or 5);
 
-		local k, er = pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, 0, 0, YSize), 'Out', 'Quad', 0.4, true);
-
-		if not (k) then
-			error(er);
-		end;
+		pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, 0, 0, YSize), 'Out', 'Quad', 0.4, true);
 
 		task.wait(0.4);
 
