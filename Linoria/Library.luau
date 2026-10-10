@@ -3516,15 +3516,22 @@ function Library:Notify(Text, Time)
 
 
 	task.spawn(function()
-		pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, XSize + 8 + 4, 0, YSize), 'Out', 'Quad', 0.4, true);
+		NotifyOuter:TweenSize(UDim2.new(0, XSize + 8 + 4, 0, YSize), 'Out', 'Quad', 0.4, true);
 		
 		task.wait(Time or 5);
 
-		pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, 0, 0, YSize), 'Out', 'Quad', 0.4, true);
+		NotifyOuter:TweenSize(UDim2.new(0, 0, 0, YSize), 'Out', 'Quad', 0.4, true);
 
 		task.wait(0.4);
 
 		NotifyOuter:Destroy();
+
+		task.delay(0.8, function()
+			if (NotifyOuter) then
+				print("Okay bro fuck this annoying notification thing bro, like why is this notification still here, anywaysw im destroying the notifcation for good hopefully")
+				NotifyOuter:Destroy();
+			end;
+		end);
 	end);
 end;
 
