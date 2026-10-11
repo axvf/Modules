@@ -3525,12 +3525,7 @@ function Library:Notify(Text, Time)
 		task.wait(0.4);
 
 		NotifyOuter:Destroy();
-
-		task.delay(0.8, function()
-			if (NotifyOuter) then
-				NotifyOuter:Destroy();
-			end;
-		end);
+		NotifyOuter = nil;
 	end);
 end;
 
