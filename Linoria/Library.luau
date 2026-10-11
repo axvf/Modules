@@ -3528,7 +3528,6 @@ function Library:Notify(Text, Time)
 
 		task.delay(0.8, function()
 			if (NotifyOuter) then
-				print("Okay bro fuck this annoying notification thing bro, like why is this notification still here, anywaysw im destroying the notifcation for good hopefully")
 				NotifyOuter:Destroy();
 			end;
 		end);
