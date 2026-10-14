@@ -196,18 +196,18 @@ do
         ["Tornado"] = {
             {
                 {
-                    ["Texture"] = "rbxassetid://14494884246"
-                    ["Brightness"] = 15
-                    ["Transparency"] = number_sequence_new(0.7)
-                    ["ZOffset"] = 0.1
-                    ["Size"] = number_sequence_new(7)
-                    ["LightInfluence"] = 0
-                    ["LightEmission"] = 1
-                    ["Lifetime"] = number_range_new(0.1, 1)
-                    ["Rate"] = 3
-                    ["Rotation"] = number_range_new(-180, 180)
-                    ["RotSpeed"] = number_range_new(120, 120)
-                    ["Speed"] = number_range_new(0.01, 0.01)
+                    ["Texture"] = "rbxassetid://14494884246",
+                    ["Brightness"] = 15,
+                    ["Transparency"] = number_sequence_new(0.7),
+                    ["ZOffset"] = 0.1,
+                    ["Size"] = number_sequence_new(7),
+                    ["LightInfluence"] = 0,
+                    ["LightEmission"] = 1,
+                    ["Lifetime"] = number_range_new(0.1, 1),
+                    ["Rate"] = 3,
+                    ["Rotation"] = number_range_new(-180, 180),
+                    ["RotSpeed"] = number_range_new(120, 120),
+                    ["Speed"] = number_range_new(0.01, 0.01),
                     ["Enabled"] = false
                 },
                 3
