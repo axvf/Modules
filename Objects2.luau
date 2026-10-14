@@ -210,7 +210,7 @@ do
                     ["Speed"] = number_range_new(0.01, 0.01),
                     ["Enabled"] = false
                 },
-                3
+                5
             }
         },
     };
