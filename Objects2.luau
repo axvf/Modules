@@ -198,7 +198,7 @@ do
                 {
                     ["Texture"] = "rbxassetid://14494884246",
                     ["Brightness"] = 15,
-                    ["Transparency"] = number_range_new(0.7, 0.7),
+                    ["Transparency"] = number_sequence_new(0.7),
                     ["ZOffset"] = 0.1,
                     ["Size"] = number_range_new(7, 7),
                     ["LightInfluence"] = 0,
