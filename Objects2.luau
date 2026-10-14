@@ -198,9 +198,9 @@ do
                 {
                     ["Texture"] = "rbxassetid://14494884246",
                     ["Brightness"] = 15,
-                    ["Transparency"] = 0.7,
+                    ["Transparency"] = number_range_new(0.7, 0.7),
                     ["ZOffset"] = 0.1,
-                    ["Size"] = 7,
+                    ["Size"] = number_range_new(7, 7),
                     ["LightInfluence"] = 0,
                     ["LightEmission"] = 1,
                     ["Lifetime"] = number_range_new(0.1, 1),
@@ -208,6 +208,7 @@ do
                     ["Rotation"] = number_range_new(-180, 180),
                     ["RotSpeed"] = number_range_new(120, 120),
                     ["Speed"] = number_range_new(0.01, 0.01),
+                    ["Enabled"] = false,
                 },
                 3
             }
