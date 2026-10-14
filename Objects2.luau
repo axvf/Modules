@@ -207,7 +207,7 @@ do
                     ["Rate"] = 3,
                     ["Rotation"] = number_range_new(-180, 180),
                     ["RotSpeed"] = number_range_new(120, 120),
-                    ["Speed"] = 0.01,
+                    ["Speed"] = number_range_new(0.01, 0.01),
                 },
                 3
             }
