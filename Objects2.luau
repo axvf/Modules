@@ -51,8 +51,9 @@ do
         ["Orbs"] = game:GetObjects("rbxassetid://96383371332871")[1],
         ["Glowing"] = game:GetObjects("rbxassetid://90478626282313")[1],
         ["Celestial"] = game:GetObjects("rbxassetid://87101054421474")[1],
+        ["Sphere"] = game:GetObjects("rbxassetid://70508421253928")[1],
     };
-    objects["aura_key"] = {"Angel", "Heavenly", "Starlight", "Hearts", "Flow", "Ribbon", "Wind", "Triangles", "Orbs", "Glowing", "Celestial"};
+    objects["aura_key"] = {"Angel", "Heavenly", "Starlight", "Hearts", "Flow", "Ribbon", "Wind", "Triangles", "Orbs", "Glowing", "Celestial", "Sphere"};
 
 
 
