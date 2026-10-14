@@ -192,9 +192,28 @@ do
                 },
                 1
             }
-        }
+        },
+        ["Tornado"] = {
+            {
+                {
+                    ["Texture"] = "rbxassetid://14494884246",
+                    ["Brightness"] = 15,
+                    ["Transparency"] = 0.7,
+                    ["ZOffset"] = 0.1,
+                    ["Size"] = 7,
+                    ["LightInfluence"] = 0,
+                    ["LightEmission"] = 1,
+                    ["Lifetime"] = number_range_new(0.1, 1),
+                    ["Rate"] = 3,
+                    ["Rotation"] = number_range_new(-180, 180),
+                    ["RotSpeed"] = 120,
+                    ["Speed"] = 0.01,
+                },
+                3
+            }
+        },
     };
-    objects["hit_effects_key"] = {"Bubble", "Clone", "Sparkles", "Orbs", "Vortex"};
+    objects["hit_effects_key"] = {"Bubble", "Clone", "Sparkles", "Orbs", "Vortex", "Tornado"};
 
 
 
