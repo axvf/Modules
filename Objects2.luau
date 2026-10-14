@@ -206,7 +206,7 @@ do
                     ["Lifetime"] = number_range_new(0.1, 1),
                     ["Rate"] = 3,
                     ["Rotation"] = number_range_new(-180, 180),
-                    ["RotSpeed"] = 120,
+                    ["RotSpeed"] = number_range_new(120, 120),
                     ["Speed"] = 0.01,
                 },
                 3
