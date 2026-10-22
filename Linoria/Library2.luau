@@ -4,6 +4,7 @@ end;
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xqvw/Modules/refs/heads/main/Variables.luau"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/axvf/Modules/refs/heads/main/CreateInstance.luau"))();
 
 local InputService = cloneref(game:GetService("UserInputService"));
 local TextService = cloneref(game:GetService("TextService"));
@@ -44,6 +45,7 @@ local Library = {
 	Font = Enum.Font.Code,
 	UiVisible = false,
 	UiLocked = false,
+	UiDragging = false,
 
 	OpenedFrames = {};
 	DependencyBoxes = {};
@@ -201,55 +203,6 @@ function Library:MakeDraggable(instance, cutoff, draglock)
 
 				run_service["RenderStepped"]:Wait();
 			end;
-		end;
-	end)
-end;
-
-
-local DraggingGui = Instance.new("ScreenGui", hui);
-function Library:MakeDraggableOutline(Instance, Cutoff)
-	Instance.Active = true;
-
-	Instance.InputBegan:Connect(function(Input)
-		if Input.UserInputType == Enum.UserInputType.MouseButton1 then
-			local ObjPos = Vector2.new(
-				Mouse.X - Instance.AbsolutePosition.X,
-				Mouse.Y - Instance.AbsolutePosition.Y
-			);
-
-			if ObjPos.Y > (Cutoff or 40) then
-				return;
-			end;
-
-			local frame = Library:Create("Frame", {
-				Parent = DraggingGui;
-				AnchorPoint = Instance.AnchorPoint;
-				BackgroundTransparency = 1;
-				Size = Instance.Size;
-				Position = Instance.Position;
-			});
-			local uistroke = Library:Create("UIStroke", {
-				Parent = frame;
-				Color = Library.AccentColor or Color3.new(0, 0, 0);
-			});
-
-			while InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
-				frame.Position = UDim2.new(
-					0,
-					Mouse.X - ObjPos.X + (Instance.Size.X.Offset * Instance.AnchorPoint.X),
-					0,
-					Mouse.Y - ObjPos.Y + (Instance.Size.Y.Offset * Instance.AnchorPoint.Y)
-				);
-				uistroke.Color = Library.AccentColor or Color3.new(0, 0, 0);
-				RenderStepped:Wait();
-			end;
-			Instance.Position = UDim2.new(
-				0,
-				Mouse.X - ObjPos.X + (Instance.Size.X.Offset * Instance.AnchorPoint.X),
-				0,
-				Mouse.Y - ObjPos.Y + (Instance.Size.Y.Offset * Instance.AnchorPoint.Y)
-			);
-			frame:Destroy();
 		end;
 	end)
 end;
@@ -2203,9 +2156,9 @@ do
 			Groupbox:Resize();
 		end;
 
-		ToggleRegion.InputBegan:Connect(function(Input)
-			if Input.UserInputType == Enum.UserInputType.MouseButton1 and not Library:MouseIsOverOpenedFrame() then
-				Toggle:SetValue(not Toggle.Value)
+		ToggleRegion["InputBegan"]:Connect(function(input)
+			if (rawequal(input["UserInputType"], Enum["UserInputType"]["MouseButton1"]) and not Library:MouseIsOverOpenedFrame()) or (rawequal(input["UserInputType"], Enum["UserInputType"]["Touch"])) then
+				Toggle:SetValue(not Toggle["Value"])
 				Library:AttemptSave();
 			end;
 		end);
@@ -3591,7 +3544,7 @@ function Library:CreateWindow(...)
 		Parent = ScreenGui;
 	});
 
-	Library:MakeDraggableOutline(Outer, 25);
+	Library:MakeDraggable(Outer, 25);
 
 	local Inner = Library:Create('Frame', {
 		BackgroundColor3 = Library.MainColor;
