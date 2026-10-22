@@ -34,12 +34,12 @@ math_sin = clonefunction(math["sin"]);
 math_cos = clonefunction(math["cos"]);
 math_rad = clonefunction(math["rad"]);
 math_sqrt = clonefunction(math["sqrt"]);
+math_ceil = clonefunction(math["ceil"]);
 
 math_pi = math["pi"];
 
 
 os_clock = clonefunction(os["clock"]);
-get_server_time = clonefunction(workspace["GetServerTimeNow"]);
 
 task_wait = clonefunction(task["wait"]);
 task_spawn = clonefunction(task["spawn"]);
@@ -79,9 +79,6 @@ udim2_from_offset = clonefunction(UDim2["fromOffset"]);
 
 
 game_id = game["GameId"];
-
-hook_function = clonefunction(hookfunction);
-set_stack_hidden = clonefunction(setstackhidden);
 
 debug_info = clonefunction(debug["info"]);
 
