@@ -53,6 +53,7 @@ table_clear = clonefunction(table["clear"]);
 table_remove = clonefunction(table["remove"]);
 table_concat = clonefunction(table["concat"]);
 table_freeze = clonefunction(table["freeze"]);
+table_find = clonefunction(table["find"]);
 
 color3_new = clonefunction(Color3["new"]);
 color3_fromrgb = clonefunction(Color3["fromRGB"]);
