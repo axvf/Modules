@@ -80,6 +80,7 @@ udim2_from_offset = clonefunction(UDim2["fromOffset"]);
 
 
 game_id = game["GameId"];
+gc = getgc(true);
 
 debug_info = clonefunction(debug["info"]);
 
