@@ -36,6 +36,8 @@ math_rad = clonefunction(math["rad"]);
 math_sqrt = clonefunction(math["sqrt"]);
 math_ceil = clonefunction(math["ceil"]);
 
+coroutine_wrap = clonefunction(coroutine["wrap"]);
+
 math_pi = math["pi"];
 
 
